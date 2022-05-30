@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="CompSci Final Project"
-run/main_scene="res://MenuPanel.tscn"
+run/main_scene="res://TitleMenu.tscn"
 config/icon="res://icon.png"
 
 [physics]
