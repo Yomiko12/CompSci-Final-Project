@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Fonts/KiriFont.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Fonts/Sniglet-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://mainMenu.gd" type="Script" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 80
@@ -42,3 +43,6 @@ custom_colors/font_color_pressed = Color( 0.968627, 0.913725, 0.00784314, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "Main Menu"
 flat = true
+script = ExtResource( 3 )
+
+[connection signal="pressed" from="MainMenuButton" to="MainMenuButton" method="_on_MainMenuButton_pressed"]
