@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Fonts/Sniglet-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Fonts/KiriFont.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Fonts/arrow-RIGHT.png" type="Texture" id=3]
 [ext_resource path="res://Fonts/grey_button04.png" type="Texture" id=4]
+[ext_resource path="res://Cars 2 Game Soundtrack - Main Menu.wav" type="AudioStream" id=5]
 [ext_resource path="res://Fonts/arrow-LEFT.png" type="Texture" id=6]
 
 [sub_resource type="DynamicFont" id=8]
@@ -177,3 +178,7 @@ margin_bottom = 43.0
 custom_colors/font_color = Color( 0.917647, 0.831373, 0.0901961, 1 )
 custom_fonts/font = SubResource( 14 )
 text = "ITEMS:"
+
+[node name="Background Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+autoplay = true

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Cars 2 Game Soundtrack - Main Menu.wav-63d538a7c95c563f273c6fc74ac08aea.sample"
+
+[deps]
+
+source_file="res://Cars 2 Game Soundtrack - Main Menu.wav"
+dest_files=[ "res://.import/Cars 2 Game Soundtrack - Main Menu.wav-63d538a7c95c563f273c6fc74ac08aea.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0
