@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Fonts/Sniglet-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Fonts/KiriFont.ttf" type="DynamicFontData" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Fonts/grey_button04.png" type="Texture" id=4]
 [ext_resource path="res://Cars 2 Game Soundtrack - Main Menu.wav" type="AudioStream" id=5]
 [ext_resource path="res://Fonts/arrow-LEFT.png" type="Texture" id=6]
+[ext_resource path="res://Button.gd" type="Script" id=7]
 
 [sub_resource type="DynamicFont" id=8]
 size = 70
@@ -154,14 +155,18 @@ margin_bottom = 45.0
 texture = ExtResource( 3 )
 expand = true
 
-[node name="Button" type="Button" parent="."]
+[node name="Play" type="Button" parent="."]
 margin_left = 437.0
 margin_top = 236.0
 margin_right = 589.0
 margin_bottom = 303.0
+custom_colors/font_color = Color( 0.0862745, 0.878431, 0.0705882, 1 )
+custom_colors/font_color_hover = Color( 0.592157, 0.858824, 0.219608, 1 )
+custom_colors/font_color_pressed = Color( 0.94902, 0.882353, 0.0470588, 1 )
 custom_fonts/font = SubResource( 7 )
 text = "PLAY!"
 flat = true
+script = ExtResource( 7 )
 
 [node name="Panel2" type="Panel" parent="."]
 margin_left = 618.0
@@ -182,3 +187,5 @@ text = "ITEMS:"
 [node name="Background Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
 autoplay = true
+
+[connection signal="pressed" from="Play" to="Play" method="_on_Play_pressed"]
