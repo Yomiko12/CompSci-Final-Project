@@ -1,3 +1,28 @@
-[gd_scene format=2]
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://MeshInstance2.gd" type="Script" id=1]
+
+[sub_resource type="PlaneMesh" id=1]
+
+[sub_resource type="Shader" id=2]
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = SubResource( 2 )
+
+[sub_resource type="CubeMesh" id=4]
 
 [node name="Spatial" type="Spatial"]
+
+[node name="Plane" type="MeshInstance" parent="."]
+mesh = SubResource( 1 )
+material/0 = SubResource( 3 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3 )
+fov = 64.6875
+
+[node name="Cube" type="MeshInstance" parent="."]
+transform = Transform( 0.153015, 0, 0, 0, 0.153015, 0, 0, 0, 0.153015, 0, 0, 0 )
+mesh = SubResource( 4 )
+material/0 = null
+script = ExtResource( 1 )

@@ -77,6 +77,7 @@ margin_left = 29.0
 margin_top = 357.0
 margin_right = 370.0
 margin_bottom = 553.0
+rect_pivot_offset = Vector2( 114, 128 )
 custom_styles/panel = SubResource( 2 )
 
 [node name="TextureRect" type="TextureRect" parent="Panel"]
@@ -114,10 +115,11 @@ custom_fonts/font = SubResource( 11 )
 text = " : BRAKE!"
 
 [node name="TextureRect2" type="TextureRect" parent="Panel"]
-margin_left = 29.0
+margin_left = 15.0
 margin_top = 109.0
-margin_right = 88.0
+margin_right = 74.0
 margin_bottom = 170.0
+rect_pivot_offset = Vector2( 87, 31 )
 texture = ExtResource( 4 )
 expand = true
 
@@ -140,9 +142,9 @@ text = " : MOVE!"
 [node name="TextureRect" type="TextureRect" parent="."]
 anchor_right = 0.02
 anchor_bottom = 0.107
-margin_left = 141.0
+margin_left = 165.0
 margin_top = 466.0
-margin_right = 183.52
+margin_right = 207.52
 margin_bottom = 462.8
 texture = ExtResource( 4 )
 expand = true
