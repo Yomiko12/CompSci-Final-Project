@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Fonts/Sniglet-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Fonts/KiriFont.ttf" type="DynamicFontData" id=2]
@@ -7,6 +7,11 @@
 [ext_resource path="res://Cars 2 Game Soundtrack - Main Menu.wav" type="AudioStream" id=5]
 [ext_resource path="res://Fonts/arrow-LEFT.png" type="Texture" id=6]
 [ext_resource path="res://Button.gd" type="Script" id=7]
+[ext_resource path="res://Quit.gd" type="Script" id=8]
+
+[sub_resource type="DynamicFont" id=15]
+size = 50
+font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=8]
 size = 70
@@ -62,6 +67,19 @@ anchor_bottom = 1.0
 margin_right = 1024.0
 margin_bottom = 600.0
 color = Color( 0.14902, 0, 0.443137, 1 )
+
+[node name="Quit" type="Button" parent="ColorRect"]
+margin_left = 437.0
+margin_top = 375.0
+margin_right = 589.0
+margin_bottom = 444.0
+custom_colors/font_color = Color( 0.952941, 0.45098, 0.0352941, 1 )
+custom_colors/font_color_hover = Color( 0.945098, 0.937255, 0.0588235, 1 )
+custom_colors/font_color_pressed = Color( 0.980392, 0.0196078, 0.0196078, 1 )
+custom_fonts/font = SubResource( 15 )
+text = "Quit"
+flat = true
+script = ExtResource( 8 )
 
 [node name="Label" type="Label" parent="."]
 margin_left = 50.0
@@ -190,4 +208,5 @@ text = "ITEMS:"
 stream = ExtResource( 5 )
 autoplay = true
 
+[connection signal="pressed" from="ColorRect/Quit" to="ColorRect/Quit" method="_on_Quit_pressed"]
 [connection signal="pressed" from="Play" to="Play" method="_on_Play_pressed"]

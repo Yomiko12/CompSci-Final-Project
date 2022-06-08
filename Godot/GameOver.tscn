@@ -1,8 +1,13 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Fonts/KiriFont.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Fonts/Sniglet-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://mainMenu.gd" type="Script" id=3]
+[ext_resource path="res://Quit.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=3]
+size = 50
+font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=1]
 size = 80
@@ -22,6 +27,19 @@ anchor_bottom = 1.0
 margin_right = 1024.0
 margin_bottom = 600.0
 color = Color( 0.25098, 0.0117647, 0.0235294, 1 )
+
+[node name="Quit" type="Button" parent="ColorRect"]
+margin_left = 405.0
+margin_top = 415.0
+margin_right = 557.0
+margin_bottom = 484.0
+custom_colors/font_color = Color( 0.952941, 0.45098, 0.0352941, 1 )
+custom_colors/font_color_hover = Color( 0.945098, 0.937255, 0.0588235, 1 )
+custom_colors/font_color_pressed = Color( 0.980392, 0.0196078, 0.0196078, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Quit"
+flat = true
+script = ExtResource( 4 )
 
 [node name="Label" type="Label" parent="."]
 margin_left = 168.0
@@ -45,4 +63,5 @@ text = "Main Menu"
 flat = true
 script = ExtResource( 3 )
 
+[connection signal="pressed" from="ColorRect/Quit" to="ColorRect/Quit" method="_on_Quit_pressed"]
 [connection signal="pressed" from="MainMenuButton" to="MainMenuButton" method="_on_MainMenuButton_pressed"]
