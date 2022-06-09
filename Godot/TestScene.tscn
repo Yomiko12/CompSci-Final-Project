@@ -18,7 +18,7 @@ mesh = SubResource( 1 )
 material/0 = SubResource( 3 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3 )
+transform = Transform( 1, 0, 0, 0, 0.84202, 0.539447, 0, -0.539447, 0.84202, 0, 1.17514, 3 )
 fov = 64.6875
 
 [node name="Cube" type="MeshInstance" parent="."]

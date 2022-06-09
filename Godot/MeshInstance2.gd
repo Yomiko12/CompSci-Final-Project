@@ -1,4 +1,5 @@
 #extends MeshInstance
+#extends MeshInstance
 #
 #export var speed = 5 # How fast we want the object to move
 #
