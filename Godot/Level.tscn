@@ -24,6 +24,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 0.5
+anchor_bottom = 0.5
 margin_right = 1024.0
 margin_bottom = 600.0
 color = Color( 0.152941, 0.470588, 0.92549, 1 )
@@ -52,10 +54,10 @@ text = "Level 1"
 flat = true
 
 [node name="Button2" type="Button" parent="ColorRect"]
-margin_left = 312.0
-margin_top = 312.0
-margin_right = 634.0
-margin_bottom = 362.0
+margin_left = 372.0
+margin_top = 357.0
+margin_right = 694.0
+margin_bottom = 412.0
 custom_colors/font_color = Color( 0.0392157, 0.94902, 0.2, 1 )
 custom_colors/font_color_hover = Color( 0.666667, 0.054902, 0.917647, 1 )
 custom_colors/font_color_pressed = Color( 0.0235294, 0.94902, 0.470588, 1 )
@@ -64,10 +66,10 @@ text = "Level 2"
 flat = true
 
 [node name="Button3" type="Button" parent="ColorRect"]
-margin_left = 312.0
-margin_top = 402.0
-margin_right = 634.0
-margin_bottom = 452.0
+margin_left = 372.0
+margin_top = 450.0
+margin_right = 694.0
+margin_bottom = 489.0
 custom_colors/font_color = Color( 0.968627, 0.188235, 0.0313726, 1 )
 custom_colors/font_color_hover = Color( 0.960784, 0.329412, 0.0235294, 1 )
 custom_colors/font_color_pressed = Color( 0.968627, 0.34902, 0.0117647, 1 )
