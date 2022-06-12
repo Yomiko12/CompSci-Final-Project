@@ -75,10 +75,10 @@ margin_bottom = 600.0
 color = Color( 0.14902, 0, 0.443137, 1 )
 
 [node name="Quit" type="Button" parent="ColorRect"]
-margin_left = 437.0
-margin_top = 375.0
-margin_right = 589.0
-margin_bottom = 444.0
+margin_left = 441.0
+margin_top = 410.0
+margin_right = 593.0
+margin_bottom = 479.0
 custom_colors/font_color = Color( 0.952941, 0.45098, 0.0352941, 1 )
 custom_colors/font_color_hover = Color( 0.945098, 0.937255, 0.0588235, 1 )
 custom_colors/font_color_pressed = Color( 0.980392, 0.0196078, 0.0196078, 1 )
@@ -88,10 +88,10 @@ flat = true
 script = ExtResource( 8 )
 
 [node name="Button" type="Button" parent="ColorRect"]
-margin_left = 446.0
-margin_top = 311.0
-margin_right = 578.0
-margin_bottom = 359.0
+margin_left = 425.0
+margin_top = 332.0
+margin_right = 620.0
+margin_bottom = 380.0
 custom_colors/font_color = Color( 0.933333, 0.901961, 0.109804, 1 )
 custom_colors/font_color_hover = Color( 0.945098, 0.435294, 0.435294, 1 )
 custom_colors/font_color_pressed = Color( 0.403922, 0.905882, 0.792157, 1 )

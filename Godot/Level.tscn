@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Fonts/KiriFont.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Fonts/Sniglet-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Level1.gd" type="Script" id=3]
+[ext_resource path="res://ReturnMenu.gd" type="Script" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 75
@@ -16,6 +18,10 @@ size = 32
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=4]
+size = 32
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
 size = 32
 font_data = ExtResource( 1 )
 
@@ -52,6 +58,7 @@ custom_colors/font_color_pressed = Color( 0.0627451, 0.0941176, 0.933333, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "Level 1"
 flat = true
+script = ExtResource( 3 )
 
 [node name="Button2" type="Button" parent="ColorRect"]
 margin_left = 372.0
@@ -76,3 +83,19 @@ custom_colors/font_color_pressed = Color( 0.968627, 0.34902, 0.0117647, 1 )
 custom_fonts/font = SubResource( 4 )
 text = "Level 3"
 flat = true
+
+[node name="Button4" type="Button" parent="ColorRect"]
+margin_left = 426.0
+margin_top = 532.0
+margin_right = 629.0
+margin_bottom = 592.0
+custom_colors/font_color = Color( 0.619608, 0.105882, 0.854902, 1 )
+custom_colors/font_color_hover = Color( 0.94902, 0.513726, 0.00784314, 1 )
+custom_colors/font_color_pressed = Color( 0.964706, 0.0509804, 0.117647, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "Escape"
+flat = true
+script = ExtResource( 4 )
+
+[connection signal="pressed" from="ColorRect/Button" to="ColorRect/Button" method="_on_Button_pressed"]
+[connection signal="pressed" from="ColorRect/Button4" to="ColorRect/Button4" method="_on_Button4_pressed"]
