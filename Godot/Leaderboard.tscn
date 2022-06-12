@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Fonts/KiriFont.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Fonts/Sniglet-Regular.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = ExtResource( 2 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 2048.0
+margin_bottom = 1200.0
+color = Color( 0.937255, 0.537255, 0.0705882, 1 )
+
+[node name="Label" type="Label" parent="ColorRect"]
+margin_left = 221.0
+margin_top = 32.0
+margin_right = 647.0
+margin_bottom = 87.0
+custom_colors/font_color = Color( 0.054902, 0.733333, 0.921569, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Leaderboard"
+
+[node name="Label" type="Label" parent="."]
+margin_left = 46.0
+margin_top = 107.0
+margin_right = 174.0
+margin_bottom = 172.0
+custom_colors/font_color = Color( 0.101961, 0.909804, 0.133333, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Time"
