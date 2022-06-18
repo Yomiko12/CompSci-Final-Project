@@ -14,6 +14,10 @@ config/name="CompSci Final Project (Lucas and Samya)"
 run/main_scene="res://Scenes/MainMenu.tscn"
 boot_splash/image="res://Images/Track1.png"
 
+[autoload]
+
+Global="*res://Scripts/Global.gd"
+
 [display]
 
 window/size/width=1920

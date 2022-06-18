@@ -29,12 +29,12 @@ anchor_bottom = 1.0
 color = Color( 0, 0, 0, 0.486275 )
 
 [node name="Main Screen" type="VBoxContainer" parent="."]
-anchor_left = 0.25
-anchor_right = 0.75
+anchor_left = 0.1
+anchor_right = 0.9
 anchor_bottom = 1.0
 
 [node name="Spacer" type="Label" parent="Main Screen"]
-margin_right = 960.0
+margin_right = 1536.0
 margin_bottom = 82.0
 text = "
 
@@ -44,15 +44,15 @@ text = "
 
 [node name="Title" type="Label" parent="Main Screen"]
 margin_top = 86.0
-margin_right = 960.0
+margin_right = 1536.0
 margin_bottom = 157.0
 theme = ExtResource( 6 )
-text = "Car Racing Game!"
+text = "Dakota Driving Simulator"
 align = 1
 
 [node name="Spacer2" type="Label" parent="Main Screen"]
 margin_top = 161.0
-margin_right = 960.0
+margin_right = 1536.0
 margin_bottom = 226.0
 text = "
 
@@ -61,7 +61,7 @@ text = "
 
 [node name="Play" type="Button" parent="Main Screen"]
 margin_top = 230.0
-margin_right = 960.0
+margin_right = 1536.0
 margin_bottom = 287.0
 theme = ExtResource( 5 )
 custom_colors/font_color = Color( 0.0862745, 0.878431, 0.0705882, 1 )
@@ -71,14 +71,14 @@ flat = true
 
 [node name="Spacer4" type="Label" parent="Main Screen"]
 margin_top = 291.0
-margin_right = 960.0
+margin_right = 1536.0
 margin_bottom = 322.0
 text = "
 "
 
 [node name="Settings" type="Button" parent="Main Screen"]
 margin_top = 326.0
-margin_right = 960.0
+margin_right = 1536.0
 margin_bottom = 383.0
 theme = ExtResource( 5 )
 custom_colors/font_color = Color( 0.933333, 0.901961, 0.109804, 1 )
@@ -88,14 +88,14 @@ flat = true
 
 [node name="Spacer3" type="Label" parent="Main Screen"]
 margin_top = 387.0
-margin_right = 960.0
+margin_right = 1536.0
 margin_bottom = 418.0
 text = "
 "
 
 [node name="Controls" type="Button" parent="Main Screen"]
 margin_top = 422.0
-margin_right = 960.0
+margin_right = 1536.0
 margin_bottom = 479.0
 theme = ExtResource( 5 )
 custom_colors/font_color = Color( 0.952941, 0.0352941, 0.8, 1 )
@@ -105,14 +105,14 @@ flat = true
 
 [node name="Spacer5" type="Label" parent="Main Screen"]
 margin_top = 483.0
-margin_right = 960.0
+margin_right = 1536.0
 margin_bottom = 514.0
 text = "
 "
 
 [node name="Quit2" type="Button" parent="Main Screen"]
 margin_top = 518.0
-margin_right = 960.0
+margin_right = 1536.0
 margin_bottom = 575.0
 theme = ExtResource( 5 )
 custom_colors/font_color = Color( 0.952941, 0.45098, 0.0352941, 1 )
@@ -152,7 +152,7 @@ text = "
 
 "
 
-[node name="CheckBox" type="CheckBox" parent="Settings Screen"]
+[node name="EnableTrees" type="CheckBox" parent="Settings Screen"]
 margin_top = 230.0
 margin_right = 576.0
 margin_bottom = 289.0
@@ -169,7 +169,7 @@ margin_bottom = 324.0
 text = "
 "
 
-[node name="CheckBox2" type="CheckBox" parent="Settings Screen"]
+[node name="ToggleFullscreen" type="CheckBox" parent="Settings Screen"]
 margin_top = 328.0
 margin_right = 576.0
 margin_bottom = 387.0
@@ -186,10 +186,32 @@ margin_bottom = 422.0
 text = "
 "
 
-[node name="ReturnFromControlScreen2" type="Button" parent="Settings Screen"]
+[node name="Spacer6" type="Label" parent="Settings Screen"]
 margin_top = 426.0
 margin_right = 576.0
-margin_bottom = 483.0
+margin_bottom = 477.0
+theme = ExtResource( 5 )
+text = "Volume"
+align = 1
+
+[node name="HSlider" type="HSlider" parent="Settings Screen"]
+margin_top = 481.0
+margin_right = 576.0
+margin_bottom = 497.0
+min_value = -50.0
+max_value = 0.0
+
+[node name="Spacer5" type="Label" parent="Settings Screen"]
+margin_top = 501.0
+margin_right = 576.0
+margin_bottom = 532.0
+text = "
+"
+
+[node name="ReturnFromControlScreen2" type="Button" parent="Settings Screen"]
+margin_top = 536.0
+margin_right = 576.0
+margin_bottom = 593.0
 theme = ExtResource( 5 )
 text = "MAin menu"
 flat = true
@@ -348,6 +370,9 @@ flat = true
 [connection signal="pressed" from="Main Screen/Settings" to="." method="_on_Settings_pressed"]
 [connection signal="pressed" from="Main Screen/Controls" to="." method="_on_Controls_pressed"]
 [connection signal="pressed" from="Main Screen/Quit2" to="." method="_on_Quit_pressed"]
+[connection signal="pressed" from="Settings Screen/EnableTrees" to="." method="_on_EnableTrees_pressed"]
+[connection signal="pressed" from="Settings Screen/ToggleFullscreen" to="." method="_on_ToggleFullscreen_pressed"]
+[connection signal="value_changed" from="Settings Screen/HSlider" to="." method="_on_HSlider_value_changed"]
 [connection signal="pressed" from="Settings Screen/ReturnFromControlScreen2" to="." method="_on_ReturnFromControlScreen_pressed"]
 [connection signal="pressed" from="Controls Screen/ReturnFromControlScreen" to="." method="_on_ReturnFromControlScreen_pressed"]
 [connection signal="pressed" from="Level Select Screen/Level1" to="." method="_on_Level1_pressed"]

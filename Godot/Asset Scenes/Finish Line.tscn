@@ -22,3 +22,8 @@ shape = SubResource( 1 )
 [node name="CollisionShape2" type="CollisionShape" parent="StaticBody" index="1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.26393, 2.88533 )
 shape = SubResource( 1 )
+
+[node name="FinishRayCast" type="RayCast" parent="." index="3"]
+transform = Transform( -1, 8.74228e-08, 3.82137e-15, 0, -4.37114e-08, 1, 8.74228e-08, 1, 4.37114e-08, 0, -2.24606, 2.78589 )
+enabled = true
+cast_to = Vector3( 0, -5.547, 0 )
